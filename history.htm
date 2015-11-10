@@ -1,0 +1,165 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<title>Val Hotel | History</title>
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+<link href="styles/style.css" media="screen" rel="stylesheet" type="text/css" />
+<script type="text/javascript" src="scripts/jquery-1.4.2.min.js"></script>
+
+<script type="text/javascript">
+
+/*** 
+    Simple jQuery Slideshow Script
+    Released by Jon Raasch (jonraasch.com) under FreeBSD license: free to use or modify, not responsible for anything, etc.  Please link out to me if you like it :)
+***/
+
+function slideSwitch() {
+    var $active = $('#slideshow IMG.active');
+
+    if ( $active.length == 0 ) $active = $('#slideshow IMG:last');
+
+    // use this to pull the images in the order they appear in the markup
+    var $next =  $active.next().length ? $active.next()
+        : $('#slideshow IMG:first');
+
+    // uncomment the 3 lines below to pull the images in random order
+    
+    // var $sibs  = $active.siblings();
+    // var rndNum = Math.floor(Math.random() * $sibs.length );
+    // var $next  = $( $sibs[ rndNum ] );
+
+
+    $active.addClass('last-active');
+
+    $next.css({opacity: 0.0})
+        .addClass('active')
+        .animate({opacity: 1.0}, 2000, function() {
+            $active.removeClass('active last-active');
+        });
+}
+
+$(function() {
+    setInterval( "slideSwitch()", 4000 );
+});
+
+</script>
+
+<style type="text/css">
+
+/*** set the width and height to match your images **/
+
+#slideshow {
+    position:relative;
+    height:339px;
+	width:775px;
+	float: left;
+}
+
+
+#slideshow IMG {
+    position:absolute;
+    z-index:8;
+    opacity:0.0;
+	float: left;
+}
+
+#slideshow IMG.active {
+    z-index:10;
+    opacity:1.0;
+}
+
+#slideshow IMG.last-active {
+    z-index:9;
+}
+
+</style>
+</head>
+
+<body>
+<div id="page">
+	<div id="sub2">
+		<ul>
+			<li class="home"><a href="index.htm"></a></li>
+			<li class="hotel"><a href="accomodation.htm" alt="The Hotel"></a></li>
+			<li class="about"><a href="history.htm" alt="About Val" class="selected"></a></li>
+			<li class="history"><a href="history.htm" alt="History" class="selected"></a></li>
+			<li class="val"><a href="val.htm" alt="About Val" ></a></li>
+			<li class="weddings"><a href="weddings.htm" alt="Weddings"></a></li>
+			<li class="events"><a href="events.htm" alt="Events"></a></li>
+			<li class="contact"><a href="contact.php" alt="Contact us"></a></li>
+		</ul>
+	</div>
+	<div id="slideshow"><img src="images/history-1.jpg" alt="Slideshow Image 1" class="active" />
+    <img src="images/history-2.jpg" alt="Slideshow Image 2" />
+        <img src="images/history-3.jpg" alt="Slideshow Image 3" />
+    <img src="images/history-4.jpg" alt="Slideshow Image 4" />
+    <img src="images/history-5.jpg" alt="Slideshow Image 5" />
+    <img src="images/history-6.jpg" alt="Slideshow Image 6" />
+    <img src="images/history-7.jpg" alt="Slideshow Image 7" />
+
+    
+    
+    </div>
+	<div id="content">
+		<h1>The History of Val</h1>
+		<p>Dr Johnson, the famous 18th century sage who compiled the first English language dictionary, observed rightly: "There is nothing which has been contrived by Man which produces so much happiness as a good Tavern or Inn."<br /><br />
+
+More than a hundred years ago, Joseph Smith and his Kerslake stepsons acquired a farm at Oudehoutspruit on the banks of the Waterval River.<br /><br />
+
+<img src="images/historysm-1.jpg" width="207" height="296" align="left" style="margin-right:5px;"/>An Inn was established that would serve the stagecoach route from the goldfields of the Lowveld to Johannesburg. The first Post Office stamp was dated "Waterval 1888". It closed for the duration of the Boer War and reopened on 1 January 1901 for Military Traffic and on 1 October 19001 for civil traffic. It seems that the Waterval Post Office at the Stagecoach Inn and the Val Post Office ran concurrently for some time. The "Waterval" Post Office only closed in 1902. President Paul Kruger decided that the now affluent Transvaal province needed a railway line. Surveyors were commissioned.<br /><br />
+
+The temperamental Waterval River flooded its banks the night these surveyors lodged at Jos Smith's Inn. Everyone was evacuated. Jos, being a keen businessman, offered the government the use of a portion of his land on higher ground.<br /><br />
+
+The typical highveld town of Waterval was established with a railway station, general dealer, hotel, Post Office,blacksmith of Horace Fry and roller mill owned by Mr. Ambrotius. In 1896 the railway line en route to Durban was officially opened with great pomp and ceremony. Elizabeth Smith buried a time capsule under one of the columns of the railway bridge.<br /><br />
+
+<img src="images/historysm-3.jpg" width="280" height="176" align="right" style="margin-left:5px;"/>This harmonious micro-cosmopolitan settlement was upset when war was declared in 1899 and neighbours would find themselves at war with some of their best friends. Joseph Smith, being on amicable terms with his Afrikaner neighbours, declared his neutrality and was deported for the duration of the war while Elizabeth ran the businesses and the farm. It is said that while she and her Afrikaner neighbours were enjoying tea on the front stoep, she would serve rations and refreshments to English soldiers at the kitchen door!<br /><br />
+
+The Waterval Camp was Private Tucker's favourite camp, as described in his "Boer War Diary". Although no big battlefields are to be found in this area, the stage was set for many anecdotes and daily skirmishes between the Boers and the British.<br />
+On 29 December 1900, the famous "Whiskey Train" incident occurred. The story according to Private Tucker:<br /><br />
+
+"some time during the morning the Boers had held up a train up about six miles away. The train was partly loaded with canteen goods, also forage and a quantity of bottled beer, spirits and champagne. The Boers took all the liquorsaway on five ox wagons loaded with goods."<br /><br />
+
+The site of the Whisky Train is situated about 4km's from Val Afrikaner families joining forces with the English created more bitterness. It is said that these traitors sat on the front of the horse and cart to point out the various farms that the English would burn down.<br /><br />
+
+Incidents such as these caused many Afrikaners of the area to join Jan Smuts in his "Forgive and Forget" policy of a united South Africa, which would ensure harmony for all nationalities. For, they said, "If our own people could betray us during the war, surely we can forgive the English."<br /><br />
+
+<img src="images/historysm-2.jpg" width="280" height="189" align="left" style="margin-right:10px;"/>It was about this time that the name "Waterval" was officially changed to "Val". There are even rumours that Oom Paul Kruger had a sweetheart by the name of Valerie, but rumours such as these are whispered among the gossipers, as we all know Oom Paul was a man of the Church and so busy that he would not have had the time or energy for little lady friends.<br /><br />
+
+Val had another distinguished visitor when Ghandi travelled along the railway line from Durban to Johannesburg on his peace march. He was arrested and imprisoned at Val, and Mr. Janoo's grandmother had to prepare a vegetarian meal for him. When asked what it was like to know that such a famous person had spent the night in Val jail, an old member of the community dryly retorted: "What a nuisance that Indian with the diaper was!"<br /><br />
+
+Val remained a lively hamlet, serving the farming community well until the 1970's when the railway station closed and the hotel became derelict. It seemed that the whole town was slowly dying like many other little towns in South Africa when the platteland becomes depopulated.<br /><br />
+
+<img src="images/historysm-4.jpg" width="250" height="170" align="right" style="margin-left:5px;"/>
+On 6 July 1994, the Val Hotel was put up for auction and Andr&eacute; &amp; Rita Britz bought it and lovingly restored it to its former glory. The couple had reason to be excited about their acquisition: Rita's ancestors, the van den Berg, Steyn and Engelbrecht families, had been farmers at Val for eight generations since 1886. Andr&eacute; and Rita had got married at the Val Church in 1982.<br /><br />
+
+The area today, is rich in historical sites dating from the Stone Age ("As old as God", according to archaeologist Rob Milne). The koppies at Greylingstad and Val are dotted with ruins, which must have been a settlement as big as any modern city!<br />
+The hamlet of Val consists of three streets, namely: Joseph-and Elizabeth Streets (on the wrong side of the tracks) and Smith Street, which are situated on the "right" side of the tracks, according to inhabitants of Smith Street. The Southern side of town consists of the old school, the co-op, a general dealer and the store of Latib Janoo &amp; Son. On the Northern side of town, you will find G.C. Tillage (manufacturer of farming equipment), the sports club (cricket, squash, tennis, polo crosse) the butcher's shop, the old shop of Joseph Smith and Sons, the hotel, the police station, four houses, the old station building, and the old post office with farm exchange.<br />
+</p>
+		<p>The Church of St. Francis of Assisi, Val, was built in 1964. Mrs. Helen Lawrence's design was used and the Smith family donated the land. In 1970 the church was struck by lightning and burnt down. In 1971 it was rebuilt and a vestry was added. </p>
+		
+	</div>
+	<div id="footer">
+		<p>Andr&eacute; &amp; Rita Britz<br />Cell: 082 550 5540<br />
+		Email: <a href="mailto:info@valhotel.co.za">info@valhotel.co.za</a></p>
+		<p class="links"><img src="images/footer-img.jpg"><ul>
+			<li class="facebook"><a href="http://www.facebook.com/#!/pages/Val-Hotel/104430946272563?ref=search" target="_blank" alt="Visit our Facebook Page"></a></li>
+			<li class="omdraai"><a href="http://www.ommidraai.co.za/" target="_blank" alt="Omdraai"></a></li>
+		</ul></p>
+		<p class="nicework">made by <a href="http://www.nicework.co.za" target="_blank">nicework</a></p>
+	</div>
+</div>
+<script type="text/javascript">
+
+  var _gaq = _gaq || [];
+  _gaq.push(['_setAccount', 'UA-18515699-1']);
+  _gaq.push(['_trackPageview']);
+
+  (function() {
+    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+  })();
+
+</script>
+</body>
+</html>

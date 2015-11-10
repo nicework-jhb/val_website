@@ -1,0 +1,230 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<title>Val Hotel | Val</title>
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+<link href="styles/style.css" media="screen" rel="stylesheet" type="text/css" />
+
+<script type="text/javascript" src="scripts/jquery-1.4.2.min.js"></script>
+
+<script type="text/javascript">
+
+/*** 
+    Simple jQuery Slideshow Script
+    Released by Jon Raasch (jonraasch.com) under FreeBSD license: free to use or modify, not responsible for anything, etc.  Please link out to me if you like it :)
+***/
+
+function slideSwitch() {
+    var $active = $('#slideshow IMG.active');
+
+    if ( $active.length == 0 ) $active = $('#slideshow IMG:last');
+
+    // use this to pull the images in the order they appear in the markup
+    var $next =  $active.next().length ? $active.next()
+        : $('#slideshow IMG:first');
+
+    // uncomment the 3 lines below to pull the images in random order
+    
+    // var $sibs  = $active.siblings();
+    // var rndNum = Math.floor(Math.random() * $sibs.length );
+    // var $next  = $( $sibs[ rndNum ] );
+
+
+    $active.addClass('last-active');
+
+    $next.css({opacity: 0.0})
+        .addClass('active')
+        .animate({opacity: 1.0}, 2000, function() {
+            $active.removeClass('active last-active');
+        });
+}
+
+$(function() {
+    setInterval( "slideSwitch()", 4000 );
+});
+
+</script>
+
+<style type="text/css">
+
+/*** set the width and height to match your images **/
+
+#slideshow {
+    position:relative;
+    height:339px;
+	width:775px;
+	float: left;
+}
+
+
+#slideshow IMG {
+    position:absolute;
+    z-index:8;
+    opacity:0.0;
+	float: left;
+}
+
+#slideshow IMG.active {
+    z-index:10;
+    opacity:1.0;
+}
+
+#slideshow IMG.last-active {
+    z-index:9;
+}
+
+</style>
+</head>
+
+<body>
+<div id="page">
+	<div id="sub2">
+		<ul>
+			<li class="home"><a href="index.htm"></a></li>
+			<li class="hotel"><a href="accomodation.htm" alt="The Hotel"></a></li>
+			<li class="about"><a href="history.htm" alt="About Val" class="selected"></a></li>
+			<li class="history"><a href="history.htm" alt="History"></a></li>
+			<li class="val"><a href="val.htm" alt="About Val" class="selected"></a></li>
+			<li class="weddings"><a href="weddings.htm" alt="Weddings"></a></li>
+			<li class="events"><a href="events.htm" alt="Events"></a></li>
+			<li class="contact"><a href="contact.php" alt="Contact us"></a></li>
+		</ul>
+	</div>
+	<div id="slideshow"><img src="images/val-1.jpg" alt="Slideshow Image 1" class="active" />
+    <img src="images/val-2.jpg" alt="Slideshow Image 2" />
+    <img src="images/val-3.jpg" alt="Slideshow Image 3" />
+    <img src="images/val-4.jpg" alt="Slideshow Image 4" />
+    <img src="images/val-5.jpg" alt="Slideshow Image 5" />
+    <img src="images/val-6.jpg" alt="Slideshow Image 6" />
+    <img src="images/val-7.jpg" alt="Slideshow Image 7" />
+    <img src="images/val-8.jpg" alt="Slideshow Image 8" />
+    <img src="images/val-9.jpg" alt="Slideshow Image 9" />
+    </div>
+	<div id="content">
+		<h1>Val</h1>
+		<p>The almost unknown little hamlet of Val is about 30 minutes from Heidelberg in Gauteng and only a stone's throw from Greylingstad on the road to Standerton. It is surely one of the smallest, cleanest and most beautiful little towns on the highveld and with only 28 inhabitants, is really worth a visit.<br /><br />
+
+Andr&eacute; and Rita Britz bought almost the whole town in an auction in 1994, including the dilapidated old "Val Hotel". The hotel has been lovingly restored it to its former glory. The couple had reason to be excited about their acquisition: Rita's ancestors, the Van den Berg, Steyn and Engelbrecht families, had been farmers at Val for eight generations since 1886 &amp; Andr&eacute; and Rita got married at the Val Church in 1982. Today the Val Hotel offers a cozy private pub, large fireplaces and spacious entertaining areas for functions, conferences, weddings and all celebrations of life. The small and beautiful thatched chapel further down the road is becoming a very popular wedding venue from where bridal pairs and their guests move to the Val Hotel for intimate country wedding receptions.
+</p>
+		<h2>Places of interest in &amp; around VAL</h2>
+        <h3>VAL </h3>
+      <p>&bull;	Traditional slaghuis next to pub<br />
+&bull;	Antique Shop<br />
+&bull;	Historical Val Hotel dating back to 1896 where peace delegates met during June 1901<br />
+&bull;	Old train station, now backpacker's accommodation<br />
+&bull;	Old post office with farm telephone exchange<br />
+&bull;	The Church of St Francis of Assisi with stained glass windows<br />
+&bull;	Die Plaashuis, old farmhouse on Oudehoutspruit Farm, now guesthouse<br />
+&bull;	Olde worlde sports club with tennis courts, cricket ground and squash court, which also has camping facilities<br />
+&bull;	GC Tillage depot, an American manufacturer of farm implements<br />
+&bull;	Val Police Station with 18 officers or so and hardly any crime<br />
+&bull;	Grain silos<br />
+&bull;	OTK sheds with vintage tractors<br />
+&bull;	Old grain silos with old steam engine<br />
+&bull;	Old Larskool, now private residence<br />
+&bull;	Janoo's tuck shop with Ghandi connection (Ghandi on his famous peaceful march was arrested in Val and spent some time in the local jail and because of his dietary requirements, meals were prepared by Mrs Janoo)<br />
+&bull;	Moeggeploegkroeg and restaurant<br />
+&bull;	Smith family graveyard<br />
+&bull;	Lane's dam &ndash; for birding<br />
+&bull;	Beautiful Cosmos between late December to mid-April<br />
+&bull;	Flamingo in Winter on Grootpan</p>
+      <p><br />
+      </p>
+
+      <h3>Around VAL </h3>
+      <p>
+&bull;	"Fairy factory", small circular pond with willows on the Weltevreden road, excellent photography, even at night<br />
+&bull;	English camp &amp; old stage coach inn ruins on Cedermont Rd<br />
+&bull;	Old sandstone railway bridge on the Cedarmont road, Boer War sites<br />
+&bull;	Site at Wolwespruit where the first Victoria Cross of the Boer War was awarded to a Canadian of Strathcona’s Horse.<br />
+&bull;	Walk to a nearby waterfall, 3 km one way, excellent for photography and birding<br />
+&bull;	Outstanding collection of miniature tractors and vintage Dinkey toy cars on the Biermann farm on Weltevreden road<br />
+&bull;	Koppie on Mahemsfontein road with stone ruins of Boer War origin, excellent 360 degree view, short walk from the road<br />
+&bull;	Iron Age engravings on koppie opposite to the above<br />
+&bull;	Bass fishing dam between above two koppies with a lovely stone cottage<br />
+&bull;	Flamingos at Grootpan<br />
+&bull;	Old mine at Hex river 1888 on the Villiers road<br />
+&bull;	Roodepoort 1896 goldmine skanzes bullet holes hiding place of Boer war guns and ammunition<br />
+&bull;	Maureen mine north of van Kolders kop<br />
+&bull;	Site of derailed whisky train on railway between Val and Teakworth<br />
+&bull;	Tegwan's Nest, between Val and Greylingstad, colonial guest farm since 1920s with ruins of the Fokeng Tribe<br />
+&bull;	200 hectare game farm close to Greylingstad, game and clay pigeon shooting<br />
+&bull;	"Ghost Town" in Greylingstad, deserted village with Moerdyk church ruin, excellent photography during late afternoon<br />
+&bull;	Small historical exhibition at Greylingstad school, soon to be moved to church<br />
+&bull;	Voortrekker graveyard in Greylingstad<br />
+&bull;	Scottish Rifles camp in Greylingstad, on n koppie<br />
+&bull;	Rare butterfly breeding ground of the "Heidelberg Copper", only to be found in seven locations on earth! (on n koppie)<br />
+&bull;	Medicinal and rare interesting plants to be found on the Greylingstad koppies<br />
+&bull;	Marked graves of those who died in the black concentration camp at Greylingstad<br />
+&bull;	G. Moerdyk house with historical first police station (stone jail at the back)<br />
+&bull;	Small museum at Greylingstad School<br />
+&bull;	Silverbank Farm, historical sandstone farm house originally built in 1906 and beautiful sandstone barns along Silverbank road<br />
+&bull;	Game Farms on the Silverbank road<br />
+&bull;	Pottery Christa Grobbelaar in Villiers road<br />
+&bull;	Lekoa lodge for quad biking on the Villiers road<br />
+&bull;	Mushroom farm on Gladdedrift road<br />
+&bull;	Traditional kraal on Gladdedrift road<br />
+&bull;	The house of Commandant Claassen, well known Boer warrior, graveyard<br />
+&bull;	The house of Joseph Smith, entrepreneur and first proprietor of the hotel.<br />
+&bull;	Grave of unknown British soldier on Willem Pistorius' farm<br />
+&bull;	Stone work at farmhouses by Jack Pinker, stone mason to Herbert Baker<br />
+&bull;	The old "Hamilton House" on the farm "Bankies"<br />
+&bull;	Farm of historian Ludwig Ankewicz of Barnardskop with artefacts and history since 1, 5 million years ago: Early Stone Age, Stone Age, Late Stone age, Early Iron Age, Iron Age, and Late Iron Age<br />
+&bull;	Site where 70 members of the Prinsloo family was murdered by the Bushman: Roodebank<br />
+&bull;	Afgri<br />
+&bull;	The church of St Francis of Assisi<br />
+&bull;	Ruins of the jail where Gandhi spent a night<br />
+&bull;	Monument to the Whisky Train<br />
+&bull;	Spot where Sgt Richardson won his VC<br />
+&bull;	Ghosts hunting<br />
+&bull;	Silos<br />
+&bull;	Old silo <br />
+&bull;	Waterval Camp and trenches<br />
+&bull;	Cosmos in autumn<br />
+&bull;	Monument to Vecht Generaal Claassen<br />
+&bull;	Monument to Arthur Martin-Leake, VC and Bar<br />
+&bull;	Flamingoes in winter<br />
+&bull;	Cork trees<br />
+&bull;	Antiques<br />
+&bull;	Geocash<br />
+&bull;	Fearie hunting<br />
+&bull;	Boere War skantze<br />
+&bull;	Iron age petroglyphs<br />
+&bull;	Leeupan<br />
+&bull;	Quad bike and 4x4 track nearby<br />
+&bull;	Birding<br />
+&bull;	Country walks<br />
+&bull;	Photography<br />
+&bull;	Cycling<br />
+&bull;	Sport club with squash, tennis and cricket<br />
+
+
+		
+        
+        
+  </div>
+	<div id="footer">
+		<p>Andr&eacute; &amp; Rita Britz<br />Cell: 082 550 5540<br />
+		Email: <a href="mailto:info@valhotel.co.za">info@valhotel.co.za</a></p>
+		<p class="links"><img src="images/footer-img.jpg"><ul>
+			<li class="facebook"><a href="http://www.facebook.com/#!/pages/Val-Hotel/104430946272563?ref=search" target="_blank" alt="Visit our Facebook Page"></a></li>
+			<li class="omdraai"><a href="http://www.ommidraai.co.za/" target="_blank" alt="Omdraai"></a></li>
+		</ul></p>
+		<p class="nicework">made by <a href="http://www.nicework.co.za" target="_blank">nicework</a></p>
+	</div>
+</div>
+</body>
+<script type="text/javascript">
+
+  var _gaq = _gaq || [];
+  _gaq.push(['_setAccount', 'UA-18515699-1']);
+  _gaq.push(['_trackPageview']);
+
+  (function() {
+    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+  })();
+
+</script>
+</html>

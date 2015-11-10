@@ -1,0 +1,144 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<title>Val Hotel</title>
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+<link href="styles/style.css" media="screen" rel="stylesheet" type="text/css" />
+
+<script type="text/javascript" src="scripts/jquery-1.4.2.min.js"></script>
+
+<script type="text/javascript">
+
+/*** 
+    Simple jQuery Slideshow Script
+    Released by Jon Raasch (jonraasch.com) under FreeBSD license: free to use or modify, not responsible for anything, etc.  Please link out to me if you like it :)
+***/
+
+function slideSwitch() {
+    var $active = $('#slideshow IMG.active');
+
+    if ( $active.length == 0 ) $active = $('#slideshow IMG:last');
+
+    // use this to pull the images in the order they appear in the markup
+    var $next =  $active.next().length ? $active.next()
+        : $('#slideshow IMG:first');
+
+    // uncomment the 3 lines below to pull the images in random order
+    
+    // var $sibs  = $active.siblings();
+    // var rndNum = Math.floor(Math.random() * $sibs.length );
+    // var $next  = $( $sibs[ rndNum ] );
+
+
+    $active.addClass('last-active');
+
+    $next.css({opacity: 0.0})
+        .addClass('active')
+        .animate({opacity: 1.0}, 2000, function() {
+            $active.removeClass('active last-active');
+        });
+}
+
+$(function() {
+    setInterval( "slideSwitch()", 4000 );
+});
+
+</script>
+
+<style type="text/css">
+
+/*** set the width and height to match your images **/
+
+#slideshow {
+    position:relative;
+    height:339px;
+	width:775px;
+	float: left;
+}
+
+
+#slideshow IMG {
+    position:absolute;
+    z-index:8;
+    opacity:0.0;
+	float: left;
+}
+
+#slideshow IMG.active {
+    z-index:10;
+    opacity:1.0;
+}
+
+#slideshow IMG.last-active {
+    z-index:9;
+}
+
+</style>
+</head>
+
+
+
+<body>
+<div id="page">
+	<div id="nav">
+		<ul>
+			<li class="home"><a href="index.htm" class="selected"></a></li>
+			<li class="hotel"><a href="accomodation.htm" alt="The Hotel"></a></li>
+			<li class="about"><a href="history.htm" alt="About Val"></a></li>
+			<li class="weddings"><a href="weddings.htm" alt="Weddings"></a></li>
+			<li class="events"><a href="events.htm" alt="Events"></a></li>
+			<li class="contact"><a href="contact.php" alt="Contact us"></a></li>
+		</ul>
+	</div>
+	<div id="slideshow">
+       <img src="images/home-1.jpg" alt="Slideshow Image 1" class="active" />
+    <img src="images/home-2.jpg" alt="Slideshow Image 2" />
+        <img src="images/home-3.jpg" alt="Slideshow Image 3" />
+        <img src="images/home-4.jpg" alt="Slideshow Image 4" />
+        <img src="images/home-5.jpg" alt="Slideshow Image 5" />
+        <img src="images/home-6.jpg" alt="Slideshow Image 6" />
+    
+    
+    </div>
+	<div id="content">
+		<h1>Welcome to Val Hotel</h1>
+		<p>The almost unknown little hamlet of Val is about 50 minutes from Heidelberg in Gauteng and only a stone's throw from Greylingstad on the road to Standerton. It is only <em>160km or 90mins from OR Thambo</em> International. It is surely one of the smallest, cleanest and most beautiful little towns on the highveld and with only 28 inhabitants, it is really worth a visit. <br /><br />
+</p>
+		<table cellpadding="7" cellspacing="0">
+		  <tr align="left" valign="top"><td width="253px" style="border-right:1px solid #CCC"><h3>Accommodation</h3>
+		<p class="small">Val Hotel has 12 rooms, 6 self-catering cottages and a backpackers which sleeps 15. It can accommodate 60 or more guests and offers full catering.</td><td width="253px" style="border-right:1px solid #CCC;"><h3>About Val</h3>
+		<p class="small">An Inn was established that would serve the stagecoach route from the goldfields of the Lowveld to Johannesburg. The first Post Office stamp was dated "Waterval 1888".</td><td width="253px"><h3>Weddings</h3>
+	  <p class="small">Val is an amazing venue for your country wedding. Get married in the The Church of St. Francis' of Assisi, and have your reception in the quaint hotel.</td></tr>
+		  <tr align="left" valign="top">
+		    <td style="border-right:1px solid #CCC" align="right"><p class="small"><a href="accomodation.htm"><strong>See more</strong></a> &gt;</p></td>
+		    <td style="border-right:1px solid #CCC" align="right"><p class="small"><a href="history.htm"><strong>See more</strong></a> &gt;</p></td>
+		    <td align="right"><p class="small"><a href="weddings.htm"><strong>See more</strong></a> &gt;</p></td>
+	      </tr>
+	  </table><br />
+	</div>
+	<div id="footer">
+		<p>Andr&eacute; &amp; Rita Britz<br />Cell: 082 550 5540<br />
+		Email: <a href="mailto:info@valhotel.co.za">info@valhotel.co.za</a></p>
+		<p class="links"><img src="images/footer-img.jpg"><ul>
+			<li class="facebook"><a href="http://www.facebook.com/#!/pages/Val-Hotel/104430946272563?ref=search" target="_blank" alt="Visit our Facebook Page"></a></li>
+			<li class="omdraai"><a href="http://www.ommidraai.co.za/" target="_blank" alt="Omdraai"></a></li>
+		</ul></p>
+		<p class="nicework">made by <a href="http://www.nicework.co.za" target="_blank">nicework</a></p>
+	</div>
+</div>
+
+<script type="text/javascript">
+
+  var _gaq = _gaq || [];
+  _gaq.push(['_setAccount', 'UA-18515699-1']);
+  _gaq.push(['_trackPageview']);
+
+  (function() {
+    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+  })();
+
+</script>
+</body>
+</html>

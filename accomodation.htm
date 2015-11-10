@@ -1,0 +1,212 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<title>Val Hotel | The Hotel</title>
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+
+<link href="styles/style.css" media="screen" rel="stylesheet" type="text/css" />
+<script type="text/javascript" src="scripts/jquery-1.4.2.min.js"></script>
+
+<style type="text/css">
+/*** set the width and height to match your images **/
+
+#slideshow {
+    position:relative;
+    height:387px;
+	width:775px;
+	float: left;
+}
+
+
+#slideshow IMG {
+    position:absolute;
+    z-index:8;
+    opacity:0.0;
+	float: left;
+}
+
+#slideshow IMG.active {
+    z-index:10;
+    opacity:1.0;
+}
+
+#slideshow IMG.last-active {
+    z-index:9;
+}
+
+</style>
+
+
+<script type="text/javascript">
+
+/*** 
+    Simple jQuery Slideshow Script
+    Released by Jon Raasch (jonraasch.com) under FreeBSD license: free to use or modify, not responsible for anything, etc.  Please link out to me if you like it :)
+***/
+
+function slideSwitch() {
+    var $active = $('#slideshow IMG.active');
+
+    if ( $active.length == 0 ) $active = $('#slideshow IMG:last');
+
+    // use this to pull the images in the order they appear in the markup
+    var $next =  $active.next().length ? $active.next()
+        : $('#slideshow IMG:first');
+
+    // uncomment the 3 lines below to pull the images in random order
+    
+    // var $sibs  = $active.siblings();
+    // var rndNum = Math.floor(Math.random() * $sibs.length );
+    // var $next  = $( $sibs[ rndNum ] );
+
+
+    $active.addClass('last-active');
+
+    $next.css({opacity: 0.0})
+        .addClass('active')
+        .animate({opacity: 1.0}, 2000, function() {
+            $active.removeClass('active last-active');
+        });
+}
+
+$(function() {
+    setInterval( "slideSwitch()", 4000 );
+});
+
+</script>
+
+</head>
+
+
+<body>
+<div id="page">
+	<div id="sub1">
+		<ul>
+			<li class="home"><a href="index.htm"></a></li>
+			<li class="hotel"><a href="accomodation.htm" alt="The Hotel" class="selected"></a></li>
+			<li class="about"><a href="history.htm" alt="About Val"></a></li>
+			<li class="accomodation"><a href="accomodation.htm" alt="Accomodation" class="selected"></a></li>
+			<li class="bar"><a href="bar.htm" alt="Bar"></a></li>
+			<li class="backpackers"><a href="backpackers.htm" alt="Backpackers"></a></li>
+			<li class="rates"><a href="rates.htm" alt="Rates"></a></li>
+			<li class="hosts"><a href="hosts.htm" alt="Your Hosts"></a></li>
+			<li class="weddings"><a href="weddings.htm" alt="Weddings"></a></li>
+			<li class="events"><a href="events.htm" alt="Events"></a></li>
+			<li class="contact"><a href="contact.php" alt="Contact us"></a></li>
+		</ul>
+	</div>
+	<div id="slideshow"><img src="images/hotelroom-1.jpg" alt="Slideshow Image 1" class="active" />
+    <img src="images/hotelroom-2.jpg" alt="Slideshow Image 2" />
+    <img src="images/hotelroom-3.jpg" alt="Slideshow Image 3" />
+    <img src="images/hotelroom-4.jpg" alt="Slideshow Image 4" />
+    <img src="images/hotelroom-5.jpg" alt="Slideshow Image 5" />
+    <img src="images/hotelroom-6.jpg" alt="Slideshow Image 6" />
+    <img src="images/hotelroom-7.jpg" alt="Slideshow Image 7" />
+    <img src="images/hotelroom-8.jpg" alt="Slideshow Image 8" />
+    <img src="images/hotelroom-9.jpg" alt="Slideshow Image 9" />
+    <img src="images/hotelroom-10.jpg" alt="Slideshow Image 10" />
+    <img src="images/hotelroom-11.jpg" alt="Slideshow Image 11" />
+    </div>
+	<div id="content">
+		<h1>The Hotel &amp; Accommodation</h1>
+		<p>Val Hotel has 12 rooms, 2 self-catering cottages and a backpackers, which sleeps 15. It can accommodate 22 or more guests and offers full catering by prior arrangement. The hotel has a cozy private pub, large fireplaces and spacious entertaining areas for functions, conferences, weddings and all celebrations of life. The small and beautiful thatched chapel further down the road is becoming a very popular wedding venue from where bridal pairs and their guests move to the Val Hotel for intimate country wedding receptions.
+	  <h2>A guided tour of Val Hotel</h2>
+        
+		The fa&ccedil;ade has remained much the same as in the old days. This section of the hotel has its original mud walls and was completed before 1896. Initially, there was a sand road in front of the Val Hotel. One of the proprietors, Mr. Pape, owned a parrot. Whenever an ox wagon came past the hotel, they would halt promptly at the whistle of the parrot. Needless to say, the parrot was not very popular among farmers trying to get 16 oxen on the move on a sand road, which was no easy feat.
+        <h3>Room 1 &ndash; "The Kiss"</h3>
+
+<p>This room used to be the bottle store with separate serving hatches in the era of political incorrectness. In a later period, when the hotel was a "rehabilitation centre" for the "retired homeless", this could have been their chapel. Against the wall, above the window, was a painted cross with the words: "God slaap nie!" (God does not sleep!) <strong><a href="mailto:val.hotel@webmail.co.za?subject=Booking Request | Room 1">Book Room 1</a></strong>
+<h3>The Entrance Hall</h3>
+The hanging lamp in the entrance hall is over 100 years old and was brought here by owners Andr&eacute; &amp; Rita from their previous Victorian house, which they restored in Standerton. The riempie couch and hallstand belonged to Rita's great grandfather and was given to his bride as a wedding gift.
+<br /><br />
+<img src="images/hotel-break-1.jpg" alt="" width="750" height="155" />
+<h3>The office &ndash; "Horace Fry"</h3>
+The office was previously known as the "Private Lounge".  It was here that Boer War Generals met to discuss the possibility of signing  the peace treaty of Vereeniging. This room is named after Horace Fry, and here is his story, according to Quinton Smith, descendant of Joseph:<br />
+"Horace Fry, a Cockney by birth, was a professional soldier in the British Army, stationed at Malta, and at the outbreak of the Boer War he was sent with his regiment to South Africa. Before the end of the War he deserted and was later given a free pardon. His real name was not Horace Fry, but he would never divulge his real identity. Horace became a plumber and owned a plumbing business in Cape Town. Later, when it was on its feet and established, he tired of the business, abandoned it, and walked to Johannesburg with a wheelbarrow and his worldly possessions, working odd jobs on the way. Horace finally arrived at Val, doing plumbing throughout the district, and operating as the local blacksmith. I drove him into Standerton hospital just before he died. I saw him put to bed as he was very ill. When I left he sat up, saluted me, and said: "Old Soldiers never die!" With that he put his head on the pillow and died."<br />
+It is also said that one can sense his friendly presence in the office..
+
+
+<h3>The Stradivarius Bar</h3>
+Yes, it does sound pretentious, but here is the story:<br />
+When the Val Hotel was restored; Andr&eacute; &amp; Rita bought the furnishings and fittings of the Ladies bar from the old Standerton Hotel demolition yard. This hotel belonged to generations of the Michael family. The last owner of the hotel was lovingly known as "Oom Boetie Michael". When he was a little boy, the family referred to the ladies bar as "The Vile Inn". Oom Boetie was unable to pronounce this phrase and used to call it "The Violin" &ndash; hence the name "Stradivarius". Look out for the "Windhoek beer" mirror. This was a gift from Sybil Smith, previous owner of the Val Hotel. This is the only original piece of furniture of the old hotel that could be found. The prize ribbons were a gift from Quinton Smith, descendant of Joseph Smith, who was a world famous Hereford breeder and judge at international agricultural shows.
+<br /><br />
+<img src="images/hotel-break-2.jpg" alt="" width="750" height="155" />
+
+<h3>The Dining Room</h3>
+ The skylight in the dining room indicates the original position of the first room in the old hotel. When renovating, these walls were knocked out, as well as the wall separating the old dining room and lounge. This was done in order to accommodate 100 guests at any given time. Many sakkie-sakkie Boere dances were held here and the old lounge has many a tale to tell, much laughter, frolicking and "getting quite nicely, thank-you". The two lithographs (in black frames) depicting coastal scenes were bought from the auction of Dickie King, grandson of the folk hero Dick King, who was granted a farm in the district after his heroic deed.
+
+ <h3>Room 2 &ndash; "The Inklings"</h3>
+ This room was chosen as "the writer's room"."The Inklings" was the name of the exclusive writer's club to which C.S.Lewis and J.R.R. Tolkien belonged. Perhaps this room would awaken the poet in you, and should you feel inspired, add your poem to the existing collection. Feel free to peruse the voluminous tomes &ndash; some are collector's items! When  Rita &amp; Andr&eacute; started renovations a secret room was found at the end of the passage. The window and door were walled in. There are rumours that the remains of a pregnant nun were found here. No evidence was found to substantiate this rumour, but then again, who knows? Anyhow this space proved to be quite useful as the room now has an en- suite shower room. <a href="mailto:val.hotel@webmail.co.za?subject=Booking Request | Room 2">Book Room 2</a>
+<br /><br />
+<img src="images/hotel-break-3.jpg" alt="" width="750" height="155" />
+
+<h3>Room3 &ndash; "Loth Lorièn"</h3>
+ This is where you can spend the night in the presence of fairies &ndash; enchanting! The shower room used to be one of the two original bathrooms. (The hotel had 13 rooms and only 2 bathrooms.) Each room was fitted with a washbasin- and ewer set in the old days.<a href="mailto:val.hotel@webmail.co.za?subject=Booking Request | Room 31"> Book Room 3</a>
+
+<h3>Room 4 &ndash; "Tintern"</h3>
+ This room is part of the section that was added in the 1930's. On renovation, part of the original paint was exposed. Travelling artists used to "decorate" hotels in the platteland for free board and lodging. Another of these "works of art" can be seen in the "Stradivarius". This room was also inspired by the ruins of Tintern Abbey on the banks of the River Wye in Wales. The shower room was one of the two original bathrooms in the old hotel. <a href="mailto:val.hotel@webmail.co.za?subject=Booking Request | Room 4">Book Room 4</a>
+
+<h3>The Side Entrance</h3>
+ The stairs and door to this room were added in 1997. The builder copied a drawing 2 x 2cm in size &ndash; a feat of true craftsmanship! The door was bought from a demolition yard.
+
+<br /><br />
+<img src="images/hotel-break-4.jpg" alt="" width="750" height="155" />
+
+<h3>Room 6 &ndash; "Bloomsbury"</h3>
+ Inspired by the "Bloomsbury" group of the Charleston Farmhouse, an artist colony in the South of England. <a href="mailto:val.hotel@webmail.co.za?subject=Booking Request | Room 6">Book Room 6</a>
+
+<h3>Room 7 &ndash; "Rama and Sita"</h3>
+ Also called the "Indian" room, will ensure dreams of faraway places and spiritual adventures. Spend 1001 nights on a magic carpet ride in this room where the styles of Ancient Persia meet that of India. Imagine you can hear the chanting of the Rishis intermingled by the rustling of pure silk saris offset against the backdrop of unusual pieces of furniture. <a href="mailto:val.hotel@webmail.co.za?subject=Booking Request | Room 7">Book Room 7</a>
+
+<h3>Room 8 &ndash; "The Pre-Raphaelites"</h3>
+ The Bathroom<br />
+This used to be the barbershop in the olden days and here you could get a shave, haircut or tooth extracted by the same "expert". Rita's grandfather had his haircut here on his wedding day in 1930. <a href="mailto:val.hotel@webmail.co.za?subject=Booking Request | Room 8">Book Room 8</a>
+
+<h3>Room 9 &ndash; "The Secret Garden"</h3>
+ This room has its own private garden, as well as access to the fairy garden. <a href="mailto:val.hotel@webmail.co.za?subject=Booking Request | Room 9">Book Room 9</a>
+
+<h3>Room 10 &ndash; "Celistine"</h3>
+ Also known as "Die Sterretjiekamer". Note the playful touch: A glow in the dark star sprangled toilet seat. <a href="mailto:val.hotel@webmail.co.za?subject=Booking Request | Room 10">Book Room 10</a>
+ 
+ <br /><br />
+<img src="images/hotel-break-5.jpg" alt="" width="750" height="155" />
+<h3>Room 11 &ndash; "In the small woods, where I found myself"</h3>
+ The forest room. Private seating available for rooms 10 and 11 <a href="mailto:val.hotel@webmail.co.za?subject=Booking Request | Room 11">Book Room 11</a>
+
+<h3>Room 12 &ndash; "Hubcap Hacienda"</h3>
+ Playfully decorated in the style of the Mexicans' celebration of life. <a href="mailto:val.hotel@webmail.co.za?subject=Booking Request | Room 12">Book Room 12</a>
+
+<h3>Room 13 &ndash; "Paardefontein" (no unlucky 13's in VAL)</h3>
+ Named after the Engelbrecht family farm, 12km from VAL, where Rita and her sisters grew up. Find the nostalgia of a bygone era in this room. <a href="mailto:val.hotel@webmail.co.za?subject=Booking Request | Room 13">Book Room 13</a>
+ <h3>Room 14 &ndash; The Gazebo</h3>
+Started off as a store room for sound equipment during famous festiVAL &ndash; soon a Hobbit's Hiding Place in the ground. <a href="mailto:val.hotel@webmail.co.za?subject=Booking Request | The Gazebo">Book The Gazebo</a>
+ <br /><br />
+ <h3>Room 15 - The Cottage</h3>
+This is a self-catering unit, which can accommodate 4 guests, consists of a bedroom, bathroom, kitchenette-cum-lounge with sleeper couch and fire place. The painting depicts "Dancing girls in the streets of Troy" and the stained glass window in the bedroom, Tristan and Isolde. <a href="mailto:val.hotel@webmail.co.za?subject=Booking Request | The Cottage">Book The Cottage</a>
+
+ <h3>Rooms 16 &amp; 17 &ndash; The Post Office</h3>
+ These wonderful self catering cottages are set in the the converted Post Office of Val. <a href="mailto:val.hotel@webmail.co.za?subject=Booking Request | Room 16 or 17">Book Room 16 or 17</a>
+ 
+ <h3>Rooms 18 &amp; 19 &ndash; Die Ou Slag Huis</h3>
+ Set right next to the Moegelploegkroeg these light and friendly rooms are the perfect self catering cottages. <a href="mailto:val.hotel@webmail.co.za?subject=Booking Request | Room 18 or 19">Book Room 18 or 19</a>
+
+
+ <h3>The Garden and Grounds</h3>
+<p>Find the faeries cavorting in the poplar grove, make a wish in the wishing well, enjoy the lazy, dreamy swing, read a book on the garden bench, or go for a walk down the only street in Val. Towards the Police Station, next to the fence, you will find the old Smith Cemetery. In the opposite direction, you will find the Post Office, Farm exchange, Church, and Sports grounds. Take a hike down to the waterfall, the faerie factory, the old silos, or the lookout point from the new silos. </p>
+<p>Val is one of the few places on earth where you can have the whole town entirely to yourself. Take advantage of this fact: spread your wings and be yourself in this zero crime area.
+  .
+  </p><br /><br /><br />
+</p>
+  </div>
+	<div id="footer">
+		<p>Andr&eacute; &amp; Rita Britz<br />Cell: 082 550 5540<br />
+		Email: <a href="mailto:info@valhotel.co.za">info@valhotel.co.za</a></p>
+		<p class="links"><img src="images/footer-img.jpg"><ul>
+			<li class="facebook"><a href="http://www.facebook.com/#!/pages/Val-Hotel/104430946272563?ref=search" target="_blank" alt="Visit our Facebook Page"></a></li>
+			<li class="omdraai"><a href="http://www.ommidraai.co.za/" target="_blank" alt="Omdraai"></a></li>
+		</ul></p>
+		<p class="nicework">made by <a href="http://www.nicework.co.za">nicework</a></p>
+	</div>
+</div>
+</body>
+</html>
